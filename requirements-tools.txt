@@ -1,0 +1,4 @@
+# Lightweight helpers only; NOT the CUDA / Open-CD training environment.
+# Freeze exact resolved versions after local validation.
+numpy>=1.24,<3
+Pillow>=10,<13

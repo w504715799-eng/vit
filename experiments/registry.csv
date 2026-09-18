@@ -1,0 +1,1 @@
+run_id,gate,hypothesis,dataset,split,model,seed,code_commit,upstream_commit,config_sha256,data_manifest_sha256,checkpoint_sha256,parent_run_id,augmentation,crop_size,effective_batch,max_iters,amp,gpu_model,gpu_hours,clean_f1,rf1_124,unchanged_fpr,change_recall,latency_ms,peak_vram_gib,status,notes
