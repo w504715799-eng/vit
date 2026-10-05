@@ -36,3 +36,7 @@ PDF、Word 文档、图片和 BibTeX 文件均可纳入版本管理。临时文�
 清理前的全部文件及历史保存在分支 [`backup/vit-before-paper-2026-10-05`](https://github.com/w504715799-eng/vit/tree/backup/vit-before-paper-2026-10-05)。
 
 原提交：`70beddd793f6fff8f185975735e9fd6776d69e9c`。本次整理保留提交历史，可通过备份分支浏览或恢复旧项目。
+
+## 当前研究计划
+
+[火焰图像研究：两方向最小验证计划](experiments/flame-research/README.md)包含可执行步骤、公开数据来源、固定验收门槛和预算。执行顺序为方向一优先，失败后只切换一次方向二，仍失败立即停止。当前仅有方案，尚未运行实验。

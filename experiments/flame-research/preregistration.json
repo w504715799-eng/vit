@@ -1,0 +1,120 @@
+{
+  "version": "2026-10-05-v1",
+  "status": "DRAFT_NOT_FROZEN",
+  "direction_order": [
+    "D1",
+    "D2"
+  ],
+  "max_direction_switches": 1,
+  "max_candidate_configs_per_direction": 1,
+  "max_screen_evaluations_per_direction": 1,
+  "max_confirm_evaluations_per_direction": 1,
+  "max_technical_repairs_per_direction": 1,
+  "inconclusive_action": "FAIL_DIRECTION",
+  "failure_actions": {
+    "D1": "SWITCH_TO_D2",
+    "D2": "STOP",
+    "global_budget_or_leakage": "STOP"
+  },
+  "terminal_states": [
+    "COMPLETE_D1",
+    "COMPLETE_D2",
+    "STOP"
+  ],
+  "budget": {
+    "max_workdays": 10,
+    "max_gpu_hours": 40,
+    "preflight": {
+      "workdays": 2,
+      "gpu_hours": 8
+    },
+    "per_direction": {
+      "workdays": 4,
+      "gpu_hours": 16,
+      "screen_gpu_hours": 8,
+      "confirm_gpu_hours": 8
+    },
+    "allow_budget_transfer": false
+  },
+  "seeds": {
+    "split": 20261005,
+    "support": [
+      17,
+      29,
+      43
+    ],
+    "bootstrap": 104729
+  },
+  "statistics": {
+    "bootstrap_replicates": 2000,
+    "unit": "source_group",
+    "paired": true,
+    "one_sided_lower_percentile": 5,
+    "confirm_min_improvement_lower_bound_exclusive": 0
+  },
+  "D1": {
+    "backbone": "DINOv3-ViT-B/16",
+    "layer": "last",
+    "input_size": 512,
+    "k": 3,
+    "support_images_per_seed": 5,
+    "hard_background_top_fraction": 0.25,
+    "temperature": 0.07,
+    "threshold_grid": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "target": "BoWFire",
+    "min_groups_per_class_per_stage": 30,
+    "min_fg_iou": 0.6,
+    "min_iou_gain_over_every_baseline": 0.03,
+    "max_negative_pixel_fraction": 0.01,
+    "max_negative_fraction_increase_over_any_baseline": 0.001,
+    "max_recall_drop_against_any_baseline": 0.01,
+    "require_positive_gain_vs_B2_for_all_support_seeds": true
+  },
+  "D2": {
+    "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "precision": "bf16",
+    "views_per_image": 5,
+    "crop_fraction": 0.6,
+    "score": "global_p * max_crop_p",
+    "calibration_recall": 0.95,
+    "min_groups_per_class_per_stage": 200,
+    "min_tpr": 0.9,
+    "max_fpr": 0.1,
+    "min_fpr_absolute_reduction_over_every_baseline": 0.05,
+    "min_fpr_relative_reduction_over_every_baseline": 0.25,
+    "max_tpr_drop_against_any_baseline": 0.01,
+    "max_median_latency_ratio_to_global": 6,
+    "audit_groups": 100,
+    "max_audit_errors": 5
+  },
+  "freeze": {
+    "protocol_commit": null,
+    "code_commits": null,
+    "model_revisions": null,
+    "weight_sha256": null,
+    "manifest_sha256": null,
+    "environment_lock_sha256": null,
+    "hardware": null,
+    "frozen_at": null
+  }
+}
