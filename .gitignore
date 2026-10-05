@@ -1,33 +1,44 @@
-# Data, checkpoints, third-party code and local/private artifacts
-/data/
-/datasets/
-/third_party/
-/work_dirs/
-/outputs/
-/reports/
-/checkpoints/
-/wandb/
-/mlruns/
-*.pth
-*.pt
-*.ckpt
-*.onnx
-*.safetensors
-*.zip
-*.tar
-*.tar.gz
-*.7z
-.env
-.env.*
-*.pem
-*.key
-credentials*.json
-secrets*.json
+# System / editor temporary files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+~$*
+.~lock.*#
+
+# Python
 __pycache__/
 *.py[cod]
-.pytest_cache/
 .venv/
 venv/
-.idea/
-.vscode/
-.DS_Store
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# LaTeX intermediate files (keep PDF outputs and source files)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+
+# Local-only bulk storage
+data/raw/
+data/processed/
+checkpoints/

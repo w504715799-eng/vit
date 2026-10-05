@@ -1,8 +1,0 @@
-{
-  "repository": "https://github.com/likyoo/open-cd.git",
-  "commit": "790a1972b538baaaffd4c3022a4d9afaa3f861e5",
-  "verified_on": "2026-09-18",
-  "baseline_config": "configs/bit/bit_r18_256x256_40k_levircd.py",
-  "training_verified": false,
-  "notes": "Read upstream files and commit metadata; no CUDA training performed."
-}
