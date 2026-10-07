@@ -1,5 +1,5 @@
 {
-  "protocol_version": "2026-10-05-v1",
+  "protocol_version": "2026-10-07-v2",
   "state": "NOT_STARTED",
   "active_direction": null,
   "switch_count": 0,
@@ -10,5 +10,8 @@
   "results": [],
   "decision_records": [],
   "stop_reason": null,
-  "note": "尚未开展实验；0 仅表示没有消耗预算，不是性能结果。"
+  "note": "没有进行火焰模型实验；本次仅文献/代码/数据元信息审计及解析敏感性计算。实验状态仍为 NOT_STARTED，switch_count=0。",
+  "review_status": "REQUIRES_REVISION",
+  "execution_ready": false,
+  "last_review": "2026-10-07"
 }

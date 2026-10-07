@@ -1,0 +1,114 @@
+{
+  "review_date": "2026-10-07",
+  "search_scope": "targeted_primary_source_review_not_systematic_review",
+  "queries": [
+    "2026 fire flame segmentation DINO few shot foundation model",
+    "2026 fire detection vision language SAFIRE global local reliability",
+    "few shot segmentation hard background prototypes negative prototypes",
+    "FireMAS github",
+    "INSID3 github DINOv3",
+    "fire vision-language zero-shot 2025 2026 CLIP"
+  ],
+  "github_searches": [
+    "fire segmentation",
+    "FSSDINO",
+    "SAFIRE fire",
+    "FireMAS"
+  ],
+  "inspected_repositories": [
+    {
+      "repository": "hussni0997/fssdino",
+      "commit": "24858986ea55e312200079937989ad32360f09b2",
+      "files": [
+        "fssdino/module.py",
+        "fss_eval.py",
+        "configs/dg.yaml"
+      ]
+    },
+    {
+      "repository": "visinf/INSID3",
+      "commit": "0c165a10cf52ab91f335883d06260de86854adbe",
+      "files": [
+        "README.md",
+        "models/__init__.py",
+        "opts.py"
+      ]
+    },
+    {
+      "repository": "dimfot3/Inverse-INSID3",
+      "commit": "e51b1e4b00258a0ec725aae2c127ac6283728a95",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "repository": "RISys-Lab/SAFIRE",
+      "commit": "ff76868cf4da817039577ff0a16cdd1c701d58b8",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "repository": "jcjiang99/CoW",
+      "commit": "aeed0eed39b0fa074ca6c1a13fabcbd3d5c9ff36",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "repository": "UEmmanuel5/ProFSAM",
+      "commit": null,
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "repository": "hayatkhan8660-maker/Fire_Seg_Dataset",
+      "commit": null,
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "repository": "gaia-solutions-on-demand/DFireDataset",
+      "commit": null,
+      "files": [
+        "README.md"
+      ]
+    }
+  ],
+  "data_checks": [
+    {
+      "url": "https://datasets-server.huggingface.co/first-rows?dataset=RISys-Lab%2FSAFIRE_193K_mcvqa&config=mcqa&split=test",
+      "fields": [
+        "image",
+        "image_name",
+        "scenario",
+        "question",
+        "options",
+        "answer",
+        "answer_key"
+      ],
+      "rows_returned": 100,
+      "reviewed": "schema and first-row textual metadata; not full image/label audit"
+    },
+    {
+      "url": "https://api.bitbucket.org/2.0/repositories/gbdi/bowfire-dataset/downloads",
+      "archive": "BoWFireDataset.zip",
+      "bytes": 291275697,
+      "downloaded": false
+    }
+  ],
+  "limitations": [
+    "No model training or inference.",
+    "No full dataset download or independent event count.",
+    "FireMAS publisher full text inaccessible; publisher-indexed abstract used.",
+    "No official FireMAS GitHub implementation verified.",
+    "Statistical sensitivity uses hypothetical variances; it is not a measured result."
+  ],
+  "decisions": {
+    "D1": "CONDITIONAL_RETAIN_NOT_READY",
+    "D2": "CURRENT_CANDIDATE_NOT_RECOMMENDED",
+    "execution_ready": false
+  }
+}

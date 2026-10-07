@@ -1,5 +1,7 @@
 # 火焰研究数据登记与划分
 
+> 2026-10-07：SAFIRE 公开 schema 使用 image_name，未提供 video_id/event_id。内部 image_id 需由 scenario + image_name 构造并用哈希核实；推定去重簇和可追溯事件须分列。BoWFire 原下载 API 已列出压缩包，完整数据仍未下载。
+
 当前仅有规范，没有已下载的数据。来源入口和限制见[来源审计](../../references/flame-research-sources.md)。
 
 每个实际图像写一行 JSON 到本地 manifest.jsonl，字段必须包含：

@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-05-v1",
-  "status": "DRAFT_NOT_FROZEN",
+  "version": "2026-10-07-v2",
+  "status": "REQUIRES_REVISION",
   "direction_order": [
     "D1",
     "D2"
@@ -116,5 +116,22 @@
     "environment_lock_sha256": null,
     "hardware": null,
     "frozen_at": null
+  },
+  "execution_ready": false,
+  "parameter_status": "V1_CANDIDATE_VALUES_RETAINED_NOT_APPROVED_FOR_EXECUTION",
+  "review": {
+    "date": "2026-10-07",
+    "report": "review-2026-10-07.md",
+    "D1": "CONDITIONAL_RETAIN_NOT_READY",
+    "D2": "CURRENT_CANDIDATE_NOT_RECOMMENDED",
+    "unresolved_issues": [
+      "novelty_vs_CoW_INSID3_Inverse_INSID3_FireMAS",
+      "FSSDINO_score_adapter_and_INSID3_baseline_protocol",
+      "support_plus_calibration_annotation_budget",
+      "SAFIRE_source_group_provenance",
+      "primary_comparator_and_power_under_fixed_budget",
+      "weight_data_access_and_actual_throughput"
+    ],
+    "no_model_experiments_run": true
   }
 }
